@@ -1,2 +1,2 @@
 # Finance Buddy
-**Author: ** Weronika Sadzik
+**Author:** Weronika Sadzik
