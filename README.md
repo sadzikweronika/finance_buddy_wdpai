@@ -1,1 +1,2 @@
-# finance_buddy_wdpai
+# Finance Buddy
+**Author: ** Weronika Sadzik
