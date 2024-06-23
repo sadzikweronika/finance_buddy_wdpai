@@ -10,15 +10,16 @@
 <body class="flex-row-center-center">
     <div class="container flex-column-center-center">
         <h1>Finance Buddy</h1>
-        <form class="flex-column-center-center">
-            <?php if(isset($messages)) {
+        <form class="login" action="login" method="POST">
+            <?php 
+            if(isset($messages) && is_array($messages) && !empty($messages)) {
                 foreach ($messages as $message){
-                    echo $message;
+                    echo "<p>$message</p>";
                 }
             }
             ?>
-            <input type="email", placeholder="email">
-            <input type="password", placeholder="password">
+            <input type="email" placeholder="email" name="email">
+            <input type="password" placeholder="password" name="password">
             <button type="submit">LOGIN</button>
         </form>
     </div>

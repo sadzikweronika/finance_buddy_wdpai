@@ -48,8 +48,4 @@ class User {
     public function setSurname(string $surname) {
         $this->surname = $surname;
     }
-
-    
-
-    
 }
