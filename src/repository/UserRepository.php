@@ -24,4 +24,21 @@ class UserRepository extends Repository {
             'Snow'
         );
     }
+
+    public function addUser(User $user) {
+
+        // TODO > check if the user already exists?
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users (email, password, name, surname)
+            VALUES (?, ?, ?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $user->getEmail(),
+            $user->getPassword(),
+            $user->getName(),
+            $user->getSurname(),
+        ]);
+    }
+
 }

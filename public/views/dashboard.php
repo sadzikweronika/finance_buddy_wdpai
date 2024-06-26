@@ -23,72 +23,8 @@
     <div class="add flex-column-center-center">
         <i class="fas fa-plus"></i>
     </div>
-
-    <div class="container flex-row-center-center">
-        <div class="sidebar">
-            SIDEBAR
-        </div>
-        <div class="main">
-            <h1>DASHBOARD</h1>
-            <div class="projects">
-                <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 1">
-                    <h2>Title 1</h2>
-                    <p>Description 1</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 2">
-                    <h2>Title 2</h2>
-                    <p>Description 2</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 3">
-                    <h2>Title 3</h2>
-                    <p>Description 3</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 4">
-                    <h2>Title 4</h2>
-                    <p>Description 4</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 5">
-                    <h2>Title 5</h2>
-                    <p>Description 5</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 6">
-                    <h2>Title 6</h2>
-                    <p>Description 6</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 7">
-                    <h2>Title 7</h2>
-                    <p>Description 7</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 8">
-                    <h2>Title 8</h2>
-                    <p>Description 8</p>
-                  </div>
-                  
-                  <div class="card">
-                    <img src="https://picsum.photos/300/200" alt="Image 9">
-                    <h2>Title 9</h2>
-                    <p>Description 9</p>
-                  </div>
-            </div>
-        </div>
-    </div>
-
     <section class="projects">
+                <?php foreach ($projects as $transaction): ?>
                 <div id="project-1">
                     <img src="public/uploads/<?= $project->getImage() ?>">
                     <div>
@@ -100,6 +36,7 @@
                         </div>
                     </div>
                 </div>
+             <?php endforeach; ?>
             </section>
 </body>
 
