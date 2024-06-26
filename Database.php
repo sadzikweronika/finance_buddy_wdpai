@@ -20,14 +20,12 @@ class Database {
     {
         try {
             $conn = new PDO(
-                // connection string
                 "pgsql:host=$this->host;port=5432;dbname=$this->database",
                 $this->username,
                 $this->password,
                 ["sslmode"  => "prefer"]
             );
 
-            // set the PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }

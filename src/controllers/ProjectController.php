@@ -1,6 +1,7 @@
 <?php
 
 require_once 'AppController.php';
+require_once __DIR__.'/../models/Project.php';
 
 class ProjectController extends AppController {
 
@@ -15,8 +16,8 @@ class ProjectController extends AppController {
                 $_FILES['file']['tmp_name'],
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
-
-            return $this->render('dashboard', ['messages' => $this->messages]);
+            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            return $this->render('dashboard', ['messages' => $this->messages, 'project' => $project]);
         }
 
         $this->render('addProject', ['messages' => $this->messages]);

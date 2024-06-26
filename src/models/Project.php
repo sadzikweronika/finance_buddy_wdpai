@@ -3,21 +3,42 @@
 class Project {
     private $title;
     private $description;
-    private $photoUrl;
-    
-    public function __construct(string $title, string $description, string $photoUrl) {
+    private $image;
+
+    public function __construct($title, $description, $image)
+    {
         $this->title = $title;
         $this->description = $description;
-        $this->photoUrl = $photoUrl;
+        $this->image = $image;
     }
-    public function getTitle(): string {
+
+    public function getTitle()
+    {
         return $this->title;
     }
-    public function getDescription(): string {
+
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    public function getDescription()
+    {
         return $this->description;
     }
-    public function getPhotoUrl(): string {
-        return $this->photoUrl;
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
-    
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
 }
